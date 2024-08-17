@@ -1,15 +1,15 @@
 import { OpenAI } from "openai";
 
-const MODEL = "gpt-4o-mini";
+const model = "gpt-4o-mini";
 const client = new OpenAI({
-  apiKey:"",
-  dangerouslyAllowBrowser: true
+  apiKey: "",
+  dangerouslyAllowBrowser: true,
 });
 
-export const gptAssistant = async (messages) => {
+export const gptAssistant = async (options) => {
   return await client.chat.completions.create({
-    messages: messages,
-    model: MODEL,
+    ...options,
+    model: model,
     stream: false,
   });
 };

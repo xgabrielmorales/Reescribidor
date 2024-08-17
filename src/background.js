@@ -1,4 +1,4 @@
-import { spellingAndGrammar } from "./OpenAI/prompts.js";
+import { spellingAndGrammar } from "./OpenAI/prompts/index.js";
 
 chrome.runtime.onInstalled.addListener(async () => {
   chrome.contextMenus.create({
