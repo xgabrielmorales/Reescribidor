@@ -27,7 +27,7 @@ export default defineConfig({
     }),
   ],
   build: {
-    minify: false,
+    minify: true,
     rollupOptions: {
       input: {
         background: "src/background.js",
