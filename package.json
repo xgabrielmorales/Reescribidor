@@ -1,0 +1,19 @@
+{
+  "name": "reescribidor",
+  "private": true,
+  "version": "0.1",
+  "type": "module",
+  "scripts": {
+    "build": "vite build && cp manifest.json dist/manifest.json"
+  },
+  "dependencies": {
+    "openai": "^4.56.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "vite": "^5.4.1",
+    "vite-plugin-babel": "^1.2.0",
+    "vite-plugin-static-copy": "^1.0.6"
+  }
+}
