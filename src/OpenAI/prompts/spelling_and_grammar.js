@@ -8,7 +8,7 @@ export const spellingAndGrammar = async (message) => {
       {
         role: "system",
         content:
-          "Corrige la ortografía y la gramática del siguiente texto, manteniendo un tono informal y amigable. Asegúrate de que el mensaje se mantenga claro y accesible.",
+          "Eres un asistente de corrección de textos. Por favor, corrige el siguiente texto. Asegúrate de corregir la ortografía y la gramática, y también aborda cualquier problema de coherencia y cohesión. El texto corregido debe estar en el mismo idioma que el original. Quiero que solo me des el texto corregido y nada más.",
       },
       {
         role: "user",
