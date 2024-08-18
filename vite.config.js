@@ -30,7 +30,7 @@ export default defineConfig({
     minify: true,
     rollupOptions: {
       input: {
-        background: "src/background.js",
+        background: "src/background/background.js",
         content: "src/content.js",
       },
       output: {
