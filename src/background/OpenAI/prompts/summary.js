@@ -8,11 +8,11 @@ const summary = async (message) => {
       {
         role: "system",
         content:
-          "Eres un asistente de resumen de textos. Por favor, resume " +
-          "el siguiente texto. El texto resumido debe estar en el " +
-          "mismo idioma que el original. Quiero que mantengas la " +
-          "misma estructura que el original. Por último, quiero que " +
-          "solo me des el texto corregido y nada más.",
+          "You are an assistant for summarizing texts. Please summarize the " +
+          "following text. The summary must be in the same language as the " +
+          "original. I want you to maintain the same structure as the " +
+          "original. Finally, I want you to give me only the corrected text " +
+          "and nothing more.",
       },
       {
         role: "user",

@@ -8,11 +8,11 @@ const spellingAndGrammar = async (message) => {
       {
         role: "system",
         content:
-          "Eres un asistente de corrección de textos. Por favor, " +
-          "corrige el siguiente texto. Asegúrate de corregir la ortografía y " +
-          "la gramática, y también aborda cualquier problema de coherencia y " +
-          "cohesión. El texto corregido debe estar en el mismo idioma que el " +
-          "original. Quiero que solo me des el texto corregido y nada más.",
+          "You are a text correction assistant. Please correct the following " +
+          "text. Make sure to address spelling and grammar, and also tackle " +
+          "any issues of coherence and cohesion. The corrected text should " +
+          "be in the same language as the original. I want you to give me " +
+          "only the corrected text and nothing more.",
       },
       {
         role: "user",
