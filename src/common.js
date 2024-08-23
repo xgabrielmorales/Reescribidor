@@ -12,23 +12,17 @@ export const startProcess = (currentClickedElement) => {
     return null;
   }
 
-  if (currentClickedElement.isContentEditable) {
-    hashes[hash] = {
-      element: currentClickedElement,
-      selection: window.getSelection(),
-    };
-  } else {
-    hashes[hash] = {
-      element: currentClickedElement,
-      start: currentClickedElement.selectionStart,
-      end: currentClickedElement.selectionEnd,
-    };
-  }
+  hashes[hash] = {
+    element: currentClickedElement,
+    selection: window.getSelection(),
+    start: currentClickedElement.selectionStart,
+    end: currentClickedElement.selectionEnd,
+  };
 
   return hash;
 };
 
-export const changeEditable = (data, text) => {
+export const replaceTextInEditable = (data, text) => {
   if (!data.element.isContentEditable || !data.selection) return null;
 
   data.selection.deleteFromDocument();
@@ -47,14 +41,12 @@ export const changeEditable = (data, text) => {
   selection.addRange(range);
 };
 
-export const changeField = (data, text) => {
-  setTimeout(() => {
-    data.element.value =
-      data.element.value.slice(0, data.start) +
-      text +
-      data.element.value.substr(data.end);
+export const replaceTextInField = (data, text) => {
+  const { element, start, end } = data;
 
-    const event = new Event("input", { bubbles: true });
-    data.element.dispatchEvent(event);
-  }, 0);
+  element.value =
+    element.value.slice(0, start) + text + element.value.substr(end);
+
+  const event = new Event("input", { bubbles: true });
+  element.dispatchEvent(event);
 };
