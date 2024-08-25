@@ -12,5 +12,10 @@
   ],
   "background": {
     "scripts": ["background.js"]
-  }
+  },
+  "web_accessible_resources": [
+    "static/popup/popup.html",
+    "static/popup/popup.css",
+    "static/loadingIndicator/loading_indicator.css"
+  ]
 }

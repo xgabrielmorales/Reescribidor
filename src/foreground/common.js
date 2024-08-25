@@ -50,3 +50,21 @@ export const replaceTextInField = (data, text) => {
   const event = new Event("input", { bubbles: true });
   element.dispatchEvent(event);
 };
+
+export const showLoadingIndicator = () => {
+  const style = document.createElement("link");
+  style.rel = "stylesheet";
+  style.href = chrome.runtime.getURL(
+    "static/loading-indicator/loading_indicator.css",
+  );
+  document.head.appendChild(style);
+
+  const loadingIndicator = document.createElement("div");
+  loadingIndicator.className = "loader";
+  document.body.appendChild(loadingIndicator);
+};
+
+export const removeLoadingIndicator = () => {
+  const loaders = Array.from(document.getElementsByClassName("loader"));
+  loaders.forEach((loader) => loader.parentNode.removeChild(loader));
+};

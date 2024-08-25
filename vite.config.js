@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
 import babel from "vite-plugin-babel";
-import { viteStaticCopy } from 'vite-plugin-static-copy';
+import { defineConfig } from "vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   plugins: [
@@ -21,6 +21,10 @@ export default defineConfig({
       targets: [
         {
           src: "manifest.json",
+          dest: "",
+        },
+        {
+          src: "src/static",
           dest: "",
         },
       ],
